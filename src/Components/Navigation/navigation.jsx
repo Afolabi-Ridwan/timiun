@@ -23,7 +23,8 @@ const Navigation = () => {
   };
 
   return (
-    <div className="w-[200px] bg-grey-transparent p-4 h-[100vh]">
+    <div className="w-[200px]">
+    <div className="w-[200px] bg-grey-transparent p-4 h-[100vh] fixed">
       <div>
         <p className="flex items-center ">
           {" "}
@@ -96,6 +97,7 @@ const Navigation = () => {
             Logout{" "}
           </li>
         </ul>
+      </div>
       </div>
     </div>
   );

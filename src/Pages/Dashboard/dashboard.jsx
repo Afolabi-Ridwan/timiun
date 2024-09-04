@@ -7,10 +7,13 @@ import { MdOutlinePersonAddAlt, MdKeyboardArrowDown } from "react-icons/md";
 import { PiWarningOctagon } from "react-icons/pi";
 import { FaUmbrellaBeach } from "react-icons/fa6";
 import TopTab from "./TopTab/topTab";
+import EmployeeStatusTabs from "./EmployeeStatusTabs/employeeStatusTabs";
+import GenderDiversityImg from "../../Assets/Images/Group 351.png";
+import EmploymentTypeImg from "../../Assets/Images/Group.png";
 
 const Dashboard = () => {
   return (
-    <div className="px-6 pt-8">
+    <div className="px-6 pt-8 ml-6">
       <div className="flex w-full justify-between items-center ">
         <div>
           <p className="flex items-center">
@@ -77,6 +80,36 @@ const Dashboard = () => {
           percent={"10%"}
           heading={"Present Workforce"}
           result={125}
+        />
+      </div>
+
+      <div className="mt-2 flex flex-row w-full gap-4">
+        <EmployeeStatusTabs
+          header="Gender Diversity"
+          graphicalRep={EmploymentTypeImg}
+          lists={[
+            {color: "fadedGreen", text: "Male", number: "42" },
+            {color: "black", text: "Female", number: "19" },
+          ]}
+        />
+        <EmployeeStatusTabs
+          header=" Employment Type"
+          graphicalRep={GenderDiversityImg}
+          biggerImgSize
+          lists={[
+            {color: "deepGreen", text: "Full time", number: "42" },
+            {color: "lightGreen", text: "Partime", number: "42" },
+            {color: "black", text: "Interns", number: "42" },
+          ]}
+        />
+        <EmployeeStatusTabs
+          header="Employment Status"
+          chart
+          lists={[
+            {color: "deepGreen", text: "Permanent", number: "42" },
+            {color: "lightGreen", text: "Contract", number: "42" },
+            {color: "fadedGreen", text: "Probation", number: "42" },
+          ]}
         />
       </div>
     </div>

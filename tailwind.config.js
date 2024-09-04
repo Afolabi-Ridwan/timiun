@@ -12,7 +12,13 @@ module.exports = {
           default: "#3d30f6;",
         },
         green:{
-          light: "#a4dd63"
+          deep: "#6BA10F",
+          light: "#A9E338",
+          faded: "#D5F68A"
+        },
+
+        black:{
+          default: "#000000"
         }
       },
     },
