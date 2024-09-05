@@ -29,7 +29,6 @@ const EmployeeStatusTabs = ({
         )}
       </div>
       <div className="mt-16">
-        {/* <ul> */}
         {lists &&
           lists.map((list) => (
             <ul
@@ -54,7 +53,6 @@ const EmployeeStatusTabs = ({
               </div>
             </ul>
           ))}
-        {/* </ul> */}
       </div>
     </div>
   );

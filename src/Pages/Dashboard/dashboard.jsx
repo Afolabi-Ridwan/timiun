@@ -10,6 +10,8 @@ import TopTab from "./TopTab/topTab";
 import EmployeeStatusTabs from "./EmployeeStatusTabs/employeeStatusTabs";
 import GenderDiversityImg from "../../Assets/Images/Group 351.png";
 import EmploymentTypeImg from "../../Assets/Images/Group.png";
+import BirthdayTab from "./BirthdaysTab/birthdayTab";
+import OtherTabs from "./OtherTabs/otherTabs";
 
 const Dashboard = () => {
   return (
@@ -88,8 +90,8 @@ const Dashboard = () => {
           header="Gender Diversity"
           graphicalRep={EmploymentTypeImg}
           lists={[
-            {color: "fadedGreen", text: "Male", number: "42" },
-            {color: "black", text: "Female", number: "19" },
+            { color: "fadedGreen", text: "Male", number: "42" },
+            { color: "black", text: "Female", number: "19" },
           ]}
         />
         <EmployeeStatusTabs
@@ -97,20 +99,59 @@ const Dashboard = () => {
           graphicalRep={GenderDiversityImg}
           biggerImgSize
           lists={[
-            {color: "deepGreen", text: "Full time", number: "42" },
-            {color: "lightGreen", text: "Partime", number: "42" },
-            {color: "black", text: "Interns", number: "42" },
+            { color: "deepGreen", text: "Full time", number: "42" },
+            { color: "lightGreen", text: "Partime", number: "42" },
+            { color: "black", text: "Interns", number: "42" },
           ]}
         />
         <EmployeeStatusTabs
           header="Employment Status"
           chart
           lists={[
-            {color: "deepGreen", text: "Permanent", number: "42" },
-            {color: "lightGreen", text: "Contract", number: "42" },
-            {color: "fadedGreen", text: "Probation", number: "42" },
+            { color: "deepGreen", text: "Permanent", number: "42" },
+            { color: "lightGreen", text: "Contract", number: "42" },
+            { color: "fadedGreen", text: "Probation", number: "42" },
           ]}
         />
+      </div>
+      <div>
+        <BirthdayTab />
+      </div>
+
+      <div className="mt-2 flex flex-row w-full gap-4 ">
+        <div className="relative top-[-350px] flex-1 mb-[-300px]">
+          <OtherTabs
+            heading={"Recruitment Snapshots"}
+            firstTabIcon={<IoBagOutline />}
+            firstTabHeading={"Open Positions"}
+            firstTabTotal={10}
+            secondTabIcon={<IoBagOutline />}
+            secondTabHeading={"Applications Recieved"}
+            secondTabTotal={150}
+          />
+        </div>
+        <div className="relative top-[-280px] flex-1 mb-[-260px]">
+          <OtherTabs
+            heading={"Leave Management"}
+            firstTabIcon={<IoBagOutline />}
+            firstTabHeading={"Pending Leave Requests"}
+            firstTabTotal={10}
+            secondTabIcon={<IoBagOutline />}
+            secondTabHeading={"Approved Leaves"}
+            secondTabTotal={5}
+          />
+        </div>
+        <div className="relative top-[-180px] flex-1 mb-[-170px]">
+          <OtherTabs
+            heading={"Employee Statistics"}
+            firstTabIcon={<IoBagOutline />}
+            firstTabHeading={"New hires this month"}
+            firstTabTotal={10}
+            secondTabIcon={<IoBagOutline />}
+            secondTabHeading={"Employees on Leave"}
+            secondTabTotal={5}
+          />
+        </div>
       </div>
     </div>
   );
